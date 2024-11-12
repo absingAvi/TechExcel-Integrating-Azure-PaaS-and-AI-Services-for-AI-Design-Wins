@@ -2,7 +2,7 @@
 param location string = resourceGroup().location
 
 @description('Password for the SQL Server admin user. PLEASE CHANGE THIS BEFORE DEPLOYMENT!')
-param sqlAdminPassword string = 'g@G9@2nD7C1BP%uh'
+param sqlAdminPassword string = 'Admin4Av!s'
 
 @description('Model deployments for OpenAI')
 param deployments array = [
@@ -378,8 +378,8 @@ resource apiManagementService 'Microsoft.ApiManagement/service@2023-09-01-previe
   name: apiManagementServiceName
   location: location
   sku: {
-    name: apimSku
-    capacity: apimSkuCount
+    name: 'Consumption'
+    capacity: 0
   }
   identity: {
     type: 'SystemAssigned'
